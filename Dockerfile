@@ -14,5 +14,6 @@ WORKDIR /home/raspi
 
 EXPOSE 80 22
 
-CMD qemu-system-arm -kernel /home/raspi/kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -nographic -append "root=/dev/sda2 panic=1 console=ttyAMA0"
+ENTRYPOINT qemu-system-arm -kernel /home/raspi/kernel-qemu -cpu arm1176 -m 256 -M versatilepb -no-reboot -nographic -append "root=/dev/sda2 panic=1 console=ttyAMA0"
+CMD -hda ./raspi.img
 
