@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y qemu-system-arm
 RUN mkdir -p /home/raspi
 ADD ./kernel-qemu /home/raspi/
 
-VOLUME ./raspi/
 WORKDIR /home/raspi
 
 EXPOSE 80 22
