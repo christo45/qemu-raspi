@@ -7,7 +7,7 @@ FROM ubuntu:14.10
 RUN apt-get update && apt-get install -y qemu-system-arm
 
 RUN mkdir -p /home/raspi
-COPY ./kernel-qemu /home/raspi/
+ADD ./kernel-qemu /home/raspi/
 
 VOLUME ./raspi/
 WORKDIR /home/raspi
